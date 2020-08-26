@@ -18,10 +18,18 @@ object {
   height: 100%;
   width: auto;
 }
+#id {
+  background-image: url(image.svg);
+}
+.bgImg1 {
+  background-image: url('../img/gg_economicGrowthBtwTwAnd3.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
 ```
 
 
-### `r econDV::insertSVG("../img/gg_economicGrowthBtwTwAnd3.svg")`
+### `r econDV::insertSVG("../img/gg_economicGrowthBtwTwAnd3.svg")` 
 
 ```{r}
 econDV::insertSVG("../img/gg_economicGrowthBtwTwAnd3.svg")

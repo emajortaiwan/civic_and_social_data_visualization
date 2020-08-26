@@ -10,7 +10,9 @@ output:
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
-library(econDV)
+library(emajorDV)
+# If any error, run the next command
+# remotes::install_github("emajortaiwan/emajorDV", build_vignettes = T, force=T)
 ```
 
 ```{css}
@@ -29,24 +31,24 @@ object {
 ```
 
 
-### `r econDV::insertSVG("../img/gg_economicGrowthBtwTwAnd3.svg")` 
+### `r emajorDV::insertSVG("../img/gg_economicGrowthBtwTwAnd3.svg")` 
 
 ```{r}
-econDV::insertSVG("../img/gg_economicGrowthBtwTwAnd3.svg")
+emajorDV::insertSVG("../img/gg_economicGrowthBtwTwAnd3.svg")
 ```
 
 
-### `r econDV::insertSVG("../img/gg_taiwanBusinessCyclesWithLights2.svg")`
+### `r emajorDV::insertSVG("../img/gg_taiwanBusinessCyclesWithLights2.svg")`
 
 ```{r}
-econDV::insertSVG("../img/gg_taiwanBusinessCyclesWithLights2.svg")
+emajorDV::insertSVG("../img/gg_taiwanBusinessCyclesWithLights2.svg")
 
 ```
 
-### `r econDV::insertSVG("../img/gg_GDPRank_base3.svg")`
+### `r emajorDV::insertSVG("../img/gg_GDPRank_base3.svg")`
 
 ```{r}
-econDV::insertSVG("../img/gg_GDPRank_base3.svg")
+emajorDV::insertSVG("../img/gg_GDPRank_base3.svg")
 
 ```
 

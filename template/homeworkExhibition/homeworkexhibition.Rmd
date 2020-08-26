@@ -1,0 +1,44 @@
+---
+title: "作業展示"
+output: 
+  flexdashboard::flex_dashboard:
+    storyboard: true
+    orientation: columns
+    vertical_layout: fill
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(econDV)
+```
+
+```{css}
+object {
+  height: 100%;
+  width: auto;
+}
+```
+
+
+### `r econDV::insertSVG("../img/gg_economicGrowthBtwTwAnd3.svg")`
+
+```{r}
+econDV::insertSVG("../img/gg_economicGrowthBtwTwAnd3.svg")
+```
+
+
+### `r econDV::insertSVG("../img/gg_taiwanBusinessCyclesWithLights2.svg")`
+
+```{r}
+econDV::insertSVG("../img/gg_taiwanBusinessCyclesWithLights2.svg")
+
+```
+
+### `r econDV::insertSVG("../img/gg_GDPRank_base3.svg")`
+
+```{r}
+econDV::insertSVG("../img/gg_GDPRank_base3.svg")
+
+```
+

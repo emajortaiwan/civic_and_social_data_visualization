@@ -1,0 +1,56 @@
+---
+title: "webStructure"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## AJAX
+
+```{js}
+$.ajax({
+    type: 'GET',
+    url: './projects/project.json',
+    dataType: "json",
+    success: function(jsond){
+        console.log(jsond);
+        $("#example > table").dataTable({
+            data: jsond,
+            columns: [
+            {data: 'project'},
+            {data: 'content'}
+            ],
+            responsive: true
+
+        })
+```
+
+# JSON: outline , SVG mapping
+
+/Users/martin/Github/civic_and_social_data_visualization/course_material/storyboard.Rmd
+```{r}
+library(rprojroot)
+rprojroot::is_rstudio_project -> root
+root$make_fix_file() -> myRoot
+list.files(path=
+               file.path(
+                   myRoot(),"course_material/img")
+           )-> allSVGs
+
+data.frame(
+  svg=allSVGs,
+  outline=c('f1','f3','c4')
+) -> mappingSVGOutlines
+
+
+jsonlite::toJSON(mappingSVGOutlines) -> jsonMapping
+
+writeLines(
+  jsonMapping,
+  con=file.path(myRoot(),"course_material/data/mapping.json")
+)
+
+```
+

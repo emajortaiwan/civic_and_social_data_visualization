@@ -1,0 +1,37 @@
+---
+title: "Storyboard"
+output: 
+  flexdashboard::flex_dashboard:
+    storyboard: true
+---
+
+```{css}
+object {
+  height: 100%;
+  width: auto;
+}
+
+.bgImg {
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: auto !important;
+}
+```
+
+
+### Frame 1
+
+
+```{r}
+emajorDV::insertSVG("./img/gg_GDPRank_base3.svg")
+```
+
+### Frame 2
+
+```{r}
+```
+
+### Frame 3
+
+```{r}
+```

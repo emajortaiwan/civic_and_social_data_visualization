@@ -25,6 +25,7 @@ $.ajax({
             responsive: true
 
         })
+})
 ```
 
 # JSON: outline , SVG mapping
